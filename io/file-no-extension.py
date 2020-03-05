@@ -7,6 +7,6 @@ path="/some/file.with-weird.dot.docx"
 # Use splitext() to get file path and extension.
 (file, ext) = os.path.splitext(path)
 
-# Print full file path and extension.
+# Print outcome.
 print("Full file path without extension =", file)
 print("Extension =", ext)

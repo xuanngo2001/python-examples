@@ -8,10 +8,10 @@ path="/some/file.with-weird.dot.docx"
 (file, ext) = os.path.splitext(path)
 
 # Remove parent directory path.
-basename = os.path.basename(path)
+filename = os.path.basename(path)
 
-# Re-split again without the filename.
-(file, ext) = os.path.splitext(basename)
+# Re-split again with the filename only.
+(file, ext) = os.path.splitext(filename)
 
 # Print outcome.
 print("Filename without extension =", file)
