@@ -2,15 +2,12 @@
 import os
 
 # File path example.
-path="/some/file.with-weird.dot.docx"
+path="/some/file.with spaces.dot.docx"
  
-# Use splitext() to get file path and extension.
-(file, ext) = os.path.splitext(path)
-
-# Remove parent directory path.
+# Get the filename only.
 filename = os.path.basename(path)
 
-# Re-split again with the filename only.
+# Use splitext() to get filename and extension separately.
 (file, ext) = os.path.splitext(filename)
 
 # Print outcome.
