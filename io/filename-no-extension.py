@@ -4,7 +4,7 @@ import os
 # File path example.
 path="/some/file.with spaces.dot.docx"
  
-# Get the filename only.
+# Get the filename only from the initial file path.
 filename = os.path.basename(path)
 
 # Use splitext() to get filename and extension separately.
