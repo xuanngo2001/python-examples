@@ -21,7 +21,7 @@ print(df['Low'])
 # Print index name.
 print(df.index.name)
  
-# Print specific index value.
+# Print index value at specific position.
 print(df.index[3])
  
 # Print index values.
