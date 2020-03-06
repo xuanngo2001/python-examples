@@ -16,8 +16,8 @@ df = pd.read_csv(StringIO(data), index_col='Date', parse_dates=True)
 # Reset index to preserve 'Date' data.
 df.reset_index(inplace = True)
 
-# Change DataFrame index to 'Stock'.
-df.set_index(['Stock'], drop=True, append=False, inplace=True)
+# Set multiple columns as index: 'Date', 'Stock'.
+df.set_index(['Date', 'Stock'], drop=True, append=False, inplace=True)
 
 # Print outcome.
 print(df)
