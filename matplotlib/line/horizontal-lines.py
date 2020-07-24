@@ -7,7 +7,7 @@ import matplotlib.pyplot as plt
 plt.axhline(y=0.5, color='r', linestyle='-')
 
 
-# Draw a line between x-axis 0.25 and 0.8.
+# Draw a line at y=0.2 between x-axis 0.25 and 0.8.
 green_fluorescent='#83f52c'
 plt.axhline(y=0.2, xmin=0.25, xmax=0.8, color=green_fluorescent, linestyle='--', linewidth=2)
 
