@@ -1,0 +1,23 @@
+{
+    "_links": {
+        "type": {
+            "href": "http://pscdoc.com/rest/type/node/article"
+        }
+    },
+    "title": [
+        {
+            "value": "Example node title"
+        }
+    ],
+    "body": [
+        {
+            "value": "This is the body content of my page",
+            "lang": "en"
+        }
+    ],            
+    "type": [
+        {
+            "target_id": "article"
+        }
+    ]
+}
