@@ -33,3 +33,22 @@ r =  [re.sub('|'.join(r'\b%s\b' % re.escape(s) for s in replacements)
             , w)
             for w in words]
 print(r) # Output: ['XX', 'SSSS']
+
+# ---------------------- Use replacements dictionary from file.
+import re
+import json
+
+with open("find_replace.json", "r") as file:            
+    replacements_json_str = file.read()
+replacements = json.loads(replacements_json_str)
+
+def replace(match):
+    return replacements[match.group(0)]
+
+words = ['ad', 'add']
+words =  [re.sub('|'.join(r'\b%s\b' % re.escape(s) for s in replacements)
+                    , replace
+                    , w)
+                    for w in words]
+
+print(words) # Output: ['XX222', 'SSSS22']
