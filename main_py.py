@@ -8,7 +8,7 @@ def main():
     print("main()")
     ahelper()
 
-def ahelper(a):
+def ahelper():
     print("A helper")
     
 if __name__ == '__main__':
