@@ -1,5 +1,6 @@
 #!/bin/python3
 
+# File all files.
 base_dir = 's1-form'
 pattern = "results_*.html"
 

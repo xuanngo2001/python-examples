@@ -19,3 +19,22 @@ for row in rows:
     cols = [ele.text.strip() for ele in cols]
     data.append([ele for ele in cols if ele]) # Get rid of empty values
 print(data)
+
+# Find parent.
+from bs4 import BeautifulSoup
+html = open("medium.html").read()
+soup = BeautifulSoup(html)
+tag = soup.find("div", text="inner")
+print tag.find_parent('div')
+#~ OUTPUT
+#~ <div>middle
+      #~ <div>inner</div>
+#~ </div>
+# ----------------------
+from bs4 import BeautifulSoup
+import re
+
+html = '<body><div>changing text</div><div>fixed text</div><body>'
+soup = BeautifulSoup(html)
+x = soup.body.findAll(text=re.compile('fixed text'))[0].parent.previous_sibling
+assert x.text == 'changing text'
