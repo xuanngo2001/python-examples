@@ -46,10 +46,15 @@ re.sub('test', 'xxxx', 'Testing', flags=re.IGNORECASE)
 # Remove white spaces trick.
 s = ''.join(s.split())
 re.sub('[\W_]', '', s)
-re.sub('[^a-zA-Z0-9_]', ' ', trust_value_tmp) # Same as above.
+re.sub('[^a-zA-Z0-9_]', ' ', s) # Same as above.
 
 # Remove all non-word characters (everything except numbers and letters)
 s = re.sub(r"[^\w\s]", '', s)
 
 # Replace all runs of whitespace with a single dash
 s = re.sub(r"\s+", '-', s)
+
+# Replace multiple spaces with 1 space.
+s = "   250,000,000 $10.00    $5.76 "
+s = re.sub(" +", " ", s)
+print(s)
