@@ -4,6 +4,7 @@
 #   - Print your string as a list to see all hidden characters.
 #   - If string size is big, in MB or plus, slim the string using string.find() and cut it(e.g. str[i:j])
 #   - Remove \xa0: import unicodedata; new_str = unicodedata.normalize("NFKD", unicode_str)
+#   - re.sub() will process fast with string length < 50,000 characters.
 
 # str.replace() doesn't recognize regular expression.
 
