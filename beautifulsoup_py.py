@@ -1,6 +1,8 @@
 #!/bin/python3
+from bs4 import BeautifulSoup
 
 # Load html file.
+filename='some.html'
 with open(filename, 'r') as f:
     contents = f.read()
 soup = BeautifulSoup(contents, 'lxml')  # 'html.parser'
@@ -25,7 +27,7 @@ from bs4 import BeautifulSoup
 html = open("medium.html").read()
 soup = BeautifulSoup(html)
 tag = soup.find("div", text="inner")
-print tag.find_parent('div')
+print(tag.find_parent('div'))
 #~ OUTPUT
 #~ <div>middle
       #~ <div>inner</div>
@@ -38,3 +40,27 @@ html = '<body><div>changing text</div><div>fixed text</div><body>'
 soup = BeautifulSoup(html)
 x = soup.body.findAll(text=re.compile('fixed text'))[0].parent.previous_sibling
 assert x.text == 'changing text'
+
+
+# ----------------------------------
+#!/bin/python3
+from bs4 import BeautifulSoup
+
+mytxt = """
+<h1>Hello World</h1>
+<p>This is a <a href="http://example.com">link</a></p>
+<td>
+    <p></p>
+    <div>HIDDEN</div>
+</td>
+"""
+
+soup = BeautifulSoup(mytxt, 'lxml')
+print(soup.text)
+
+# Remove all attributes, e.g. style, class, etc.
+def removeAttributes(soup):
+    for x in soup.find_all():
+        x.attrs = None
+        
+    return soup

@@ -38,3 +38,7 @@ dt_new = dt - delta_time
 print(dt_new)
 dt_new = dt + delta_time
 print(dt_new)
+
+# Comparison
+if d1_1990 > dt_new:
+    print(" date is greater ")

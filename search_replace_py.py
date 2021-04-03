@@ -23,8 +23,11 @@ print(f)
 
 import re
 txt = "The rain in Spain"
-f = re.search(" .*ain ", txt).group()
-print(f)
+f = re.search(" .*ain ", txt)
+if f is None:
+    print('Not found')
+else:
+    print(f.group)
 
 # Match any 5 characters or more
 #.{5,}

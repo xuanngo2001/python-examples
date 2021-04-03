@@ -40,3 +40,12 @@ print( "7".zfill(5) )                           # 00007
 
 import datetime
 '{:%Y-%m-%d %H:%M:%S}'.format(datetime.datetime.now())
+
+# Lowercase / uppercase
+print(str.lower())
+print(str.upper())
+
+# Join / split
+fruits = ('banana', 'kiwi', 'apple')
+s = ', '.join(fruits)
+print(s)

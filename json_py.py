@@ -33,3 +33,11 @@ with open('json.test.json', 'r') as fh:
 new_dict = json.loads(json_text)
 print(new_dict) # {'key': {'replace': 99, 'search': 33}}
 print(new_dict['key']['replace'])
+
+# Dictionary to json format.
+fruits_list = ('banana', 'apple')
+mydict = {}
+mydict['fruits'] = fruits_list
+
+print(mydict)
+print(json.dumps(mydict, indent=4, sort_keys=True))

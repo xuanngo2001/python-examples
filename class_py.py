@@ -9,6 +9,9 @@ class Person(object):
         self.name = name
         self.age = age
         self.todo = {}
+        
+        # Call its own methos.
+        self.addTodo('12PM', 'Call own methods')
     
     def addTodo(self, key, value):
         self.todo[key] = value
@@ -35,10 +38,10 @@ print(kate.shared)
 
 
 #~ John
-#~ {'5PM': 'play', '6PM': 'souper'}
+#~ {'12PM': 'Call own methods', '5PM': 'play', '6PM': 'souper'}
 #~ {'5': 'from john'}
 #~ ================
 #~ Kate
-#~ {'7PM': 'read', '9PM': 'sleep'}
+#~ {'12PM': 'Call own methods', '7PM': 'read', '9PM': 'sleep'}
 #~ {'5': 'from john', '9': 'from kate'}
 
