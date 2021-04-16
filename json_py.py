@@ -32,12 +32,40 @@ with open('json.test.json', 'r') as fh:
     json_text = fh.read()
 new_dict = json.loads(json_text)
 print(new_dict) # {'key': {'replace': 99, 'search': 33}}
-print(new_dict['key']['replace'])
+print(new_dict['key']['replace'])   # 99
 
 # Dictionary to json format.
 fruits_list = ('banana', 'apple')
 mydict = {}
 mydict['fruits'] = fruits_list
 
-print(mydict)
+print(mydict)   # {'fruits': ('banana', 'apple')}
 print(json.dumps(mydict, indent=4, sort_keys=True))
+# {
+#     "fruits": [
+#         "banana",
+#         "apple"
+#     ]
+# }
+
+# Dictionary list of dictionaries.
+mydict = {}
+mylist = []
+subdictA = {'a': 'apple',   'b': 'banana'}
+subdictB = {'a': 'apricot', 'b': 'blueberry'}
+mylist.append(subdictA)
+mylist.append(subdictB)
+mydict['key'] = mylist
+print(json.dumps(mydict, indent=4, sort_keys=True))
+# {
+#     "key": [
+#         {
+#             "a": "apple",
+#             "b": "banana"
+#         },
+#         {
+#             "a": "apricot",
+#             "b": "blueberry"
+#         }
+#     ]
+# }

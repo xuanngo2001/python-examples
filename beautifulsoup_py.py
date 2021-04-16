@@ -7,6 +7,9 @@ with open(filename, 'r') as f:
     contents = f.read()
 soup = BeautifulSoup(contents, 'lxml')  # 'html.parser'
 
+# If you just want a string, with no fancy formatting, you can call str() on a BeautifulSoup object 
+str(soup)
+
 # Print pretty.
 print(soup.prettify())
 

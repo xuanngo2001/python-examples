@@ -39,6 +39,29 @@ print(dt_new)
 dt_new = dt + delta_time
 print(dt_new)
 
+# Note: add 8 weeks or add 2 months are not equivalent.
+from datetime import date, datetime, timedelta
+from calendar import calendar, monthrange
+
+def addMonths(sourcedate, months):
+    month = sourcedate.month - 1 + months
+    year = sourcedate.year + month // 12
+    month = month % 12 + 1
+    day = min(sourcedate.day, monthrange(year,month)[1])
+    return date(year, month, day)
+    
+a_date = date(2019, 4, 13)
+print(a_date)
+r = addMonths(a_date, 4)
+print(r)
+
+
 # Comparison
 if d1_1990 > dt_new:
     print(" date is greater ")
+    
+# Different between 2 dates
+date_1 = date(2020, 10, 6)
+date_2 = date(2021, 4, 8)
+diff = date_2 - date_1
+print(diff)
