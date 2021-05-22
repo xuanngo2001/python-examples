@@ -55,6 +55,15 @@ print(a_date)
 r = addMonths(a_date, 4)
 print(r)
 
+# Time difference between 2 datetime objects.
+import time
+start_dt = datetime.now()
+time.sleep(3)
+end_dt = datetime.now()
+diff_dt = end_dt - start_dt
+print("difference time = {}".format(diff_dt))
+print("difference time in days = {}".format(diff_dt.days))
+print("difference time in secs = {}".format(diff_dt.seconds))
 
 # Comparison
 if d1_1990 > dt_new:
