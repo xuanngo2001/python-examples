@@ -1,6 +1,6 @@
 #!/bin/python3
 
-# import x VS from x import y.
+# import x VERSUS from x import y.
 #   Always use "from x import y". This allow you to know what are being imported.
 
 # From datetime modue, import date, datetime and timedelta class.
