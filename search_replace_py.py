@@ -6,7 +6,8 @@
 #   - Remove \xa0: import unicodedata; new_str = unicodedata.normalize("NFKD", unicode_str)
 #   - re.sub() will process fast with string length < 50,000 characters.
 
-# str.replace() doesn't recognize regular expression.
+str="JohnX0Smith"
+print(str.replace("X0", " "))    # doesn't recognize regular expression.
 
 # Search and replace using regex.
 import re

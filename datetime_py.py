@@ -16,11 +16,14 @@ print(dt)
 str = "Jun 1 2005 1:35:49PM"
 dt = datetime.strptime(str, '%b %d %Y %I:%M:%S%p')
 str = "2007-11-04T15:23:01Z"
-dt= datetime.strptime(str, '%Y-%m-%dT%H:%M:%SZ')
+dt = datetime.strptime(str, '%Y-%m-%dT%H:%M:%SZ')
 
 # Date to string.
 dt_str = dt.strftime("%m/%d/%Y, %H:%M:%S")
 print( dt_str )
+
+dt_str = "2021-06-28, 11:42:45"
+print(datetime.strptime(dt_str, "%Y-%m-%d, %H:%M:%S").isoformat())
 
 # Access date properties.
 print( dt )
